@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10120e">
+  <meta name="theme-color" content="#20242a">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
     }
 
     .mono {
-      color: var(--muted);
+      color: var(--cream-muted);
       font-family: var(--mono);
       font-size: 12px;
       text-decoration: none;
     }
 
-    .mono:hover { color: var(--lime-green); }
+    .mono:hover { color: var(--electric-blue); }
 
     main { padding-block: 64px 100px; }
 
     .back {
-      color: var(--lime-green);
+      color: var(--electric-blue);
       font-family: var(--mono);
       font-size: 12px;
       text-decoration: none;
@@ -35,7 +35,7 @@
 
     .category {
       margin: 40px 0 14px;
-      color: var(--lime-green);
+      color: var(--electric-blue);
       font-family: var(--mono);
       font-size: 12px;
       text-transform: uppercase;
@@ -52,7 +52,7 @@
     .description {
       max-width: 650px;
       margin: 20px 0 0;
-      color: var(--muted);
+      color: var(--cream-muted);
       font-size: 18px;
       line-height: 1.6;
     }
@@ -78,24 +78,24 @@
 
     article p,
     article ul,
-    article ol { color: #d3d5ce; }
+    article ol { color: var(--cream-muted); }
 
     article a {
-      color: var(--lime-green);
+      color: var(--electric-blue);
       text-underline-offset: 4px;
     }
 
     article blockquote {
       margin-inline: 0;
       padding: 2px 0 2px 20px;
-      border-left: 2px solid var(--lime-green);
-      color: var(--muted);
+      border-left: 2px solid var(--electric-blue);
+      color: var(--cream-muted);
     }
 
     article code {
       padding: 2px 5px;
-      background: #20231c;
-      color: var(--lime-green);
+      background: var(--charcoal-deep);
+      color: var(--electric-blue);
       font-family: var(--mono);
       font-size: 0.84em;
     }
@@ -104,13 +104,13 @@
       overflow-x: auto;
       padding: 18px;
       border: 1px solid var(--line);
-      background: #171a14;
+      background: var(--charcoal-deep);
     }
 
     article pre code {
       padding: 0;
       background: none;
-      color: var(--pure-white);
+      color: var(--cream);
     }
 
     article img {
@@ -132,7 +132,7 @@
       text-align: left;
     }
 
-    article th { color: var(--lime-green); }
+    article th { color: var(--electric-blue); }
     footer { padding-block: 22px; border-top: 1px solid var(--line); }
 
     @media (max-width: 600px) {
@@ -144,7 +144,7 @@
 </head>
 <body>
   <header class="shell topbar">
-    <a class="wordmark" href="{{ '/' | relative_url }}"><span class="wordmark-mark" aria-hidden="true"></span>EROAH</a>
+    <a class="wordmark" href="{{ '/' | relative_url }}"><span class="wordmark-mark" aria-hidden="true"></span>JOSE RODAS</a>
     <a class="mono" href="{{ '/' | relative_url }}#writeups">← Todos los writeups</a>
   </header>
   <main class="shell">
@@ -154,6 +154,6 @@
     {% if page.description %}<p class="description">{{ page.description }}</p>{% endif %}
     <article>{{ content }}</article>
   </main>
-  <footer class="shell mono">© {{ site.time | date: "%Y" }} Eroah</footer>
+  <footer class="shell mono">© {{ site.time | date: "%Y" }} Jose Rodas · Eroah</footer>
 </body>
 </html>

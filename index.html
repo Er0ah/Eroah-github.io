@@ -1,13 +1,13 @@
 ---
-title: Eroah | Writeups de ciberseguridad
+title: Jose Rodas | Writeups de ciberseguridad
 ---
 <!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10120e">
-  <meta name="description" content="Writeups de ciberseguridad, notas técnicas y perfil de Eroah.">
+  <meta name="theme-color" content="#20242a">
+  <meta name="description" content="Writeups de ciberseguridad, notas técnicas y perfil de Jose Rodas.">
   <title>{{ site.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,17 +21,16 @@ title: Eroah | Writeups de ciberseguridad
     .footer-note {
       font-family: var(--mono);
       font-size: 12px;
-      letter-spacing: 0;
     }
 
     .nav-links {
       display: flex;
       gap: 30px;
-      color: var(--muted);
+      color: var(--cream-muted);
     }
 
     .nav-links a { text-decoration: none; }
-    .nav-links a:hover { color: var(--lime-green); }
+    .nav-links a:hover { color: var(--electric-blue); }
 
     .hero {
       min-height: 570px;
@@ -50,7 +49,7 @@ title: Eroah | Writeups de ciberseguridad
       z-index: -1;
       inset: 20px -24px 20px 46%;
       opacity: 0.18;
-      background-image: linear-gradient(rgba(243, 244, 237, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(243, 244, 237, 0.12) 1px, transparent 1px);
+      background-image: linear-gradient(rgba(242, 234, 220, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(242, 234, 220, 0.1) 1px, transparent 1px);
       background-size: 32px 32px;
       mask-image: linear-gradient(90deg, transparent, #000 45%, transparent);
     }
@@ -59,7 +58,7 @@ title: Eroah | Writeups de ciberseguridad
       display: flex;
       align-items: center;
       gap: 10px;
-      color: var(--lime-green);
+      color: var(--electric-blue);
       text-transform: uppercase;
     }
 
@@ -77,10 +76,12 @@ title: Eroah | Writeups de ciberseguridad
       font-weight: 600;
     }
 
+    .hero-title-dot { color: var(--electric-blue); }
+
     .hero-copy {
       max-width: 470px;
       margin: 0;
-      color: #c6c8c0;
+      color: var(--cream-muted);
       font-size: 18px;
       line-height: 1.65;
     }
@@ -99,8 +100,8 @@ title: Eroah | Writeups de ciberseguridad
       align-items: center;
       gap: 18px;
       padding: 0 16px;
-      background: var(--lime-green);
-      color: var(--midnight-black);
+      background: var(--electric-blue);
+      color: var(--charcoal);
       font-family: var(--mono);
       font-size: 13px;
       text-decoration: none;
@@ -108,27 +109,28 @@ title: Eroah | Writeups de ciberseguridad
     }
 
     .primary-link:hover {
-      background: var(--pure-white);
+      background: var(--cream);
       transform: translateY(-2px);
     }
 
     .text-link {
-      color: var(--pure-white);
+      color: var(--cream);
       font-family: var(--mono);
       font-size: 13px;
       text-decoration-color: var(--line);
       text-underline-offset: 5px;
     }
 
-    .text-link:hover { text-decoration-color: var(--lime-green); }
+    .text-link:hover { text-decoration-color: var(--electric-blue); }
 
     .terminal {
       width: 100%;
       max-width: 390px;
       justify-self: end;
-      border: 1px solid #5b5e53;
-      background: rgba(16, 18, 14, 0.94);
-      box-shadow: 16px 16px 0 rgba(196, 243, 74, 0.08);
+      border: 1px solid var(--cream);
+      background: var(--cream);
+      color: var(--charcoal);
+      box-shadow: 16px 16px 0 rgba(91, 149, 255, 0.12);
       animation: arrive 700ms 100ms both;
     }
 
@@ -138,7 +140,7 @@ title: Eroah | Writeups de ciberseguridad
       align-items: center;
       justify-content: space-between;
       padding-inline: 16px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(32, 36, 42, 0.16);
     }
 
     .terminal-controls { display: flex; gap: 6px; }
@@ -146,25 +148,25 @@ title: Eroah | Writeups de ciberseguridad
     .terminal-controls span {
       width: 7px;
       height: 7px;
-      border: 1px solid var(--muted);
+      border: 1px solid var(--ink-muted);
       border-radius: 50%;
     }
 
-    .terminal-label { color: var(--muted); }
+    .terminal-label { color: var(--ink-muted); }
 
     .terminal-body {
       min-height: 245px;
       padding: 24px 20px;
-      color: #c6c8c0;
+      color: var(--charcoal);
       font-family: var(--mono);
       font-size: 12px;
       line-height: 2;
     }
 
     .terminal-line { display: block; }
-    .terminal-prompt { color: var(--lime-green); }
-    .terminal-value { color: var(--pure-white); }
-    .terminal-comment { color: #777b70; }
+    .terminal-prompt { color: var(--electric-blue-deep); }
+    .terminal-value { color: var(--charcoal); }
+    .terminal-comment { color: var(--ink-muted); }
 
     .section {
       padding-block: 82px;
@@ -178,7 +180,7 @@ title: Eroah | Writeups de ciberseguridad
       margin-bottom: 38px;
     }
 
-    .section-index { color: var(--lime-green); }
+    .section-index { color: var(--electric-blue); }
 
     h2 {
       margin: 0;
@@ -193,20 +195,21 @@ title: Eroah | Writeups de ciberseguridad
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      padding: 24px;
+      background: var(--cream);
+      color: var(--charcoal);
     }
 
     .empty-state p {
       margin: 0;
-      color: var(--muted);
+      color: var(--charcoal);
       font-size: 16px;
       line-height: 1.6;
     }
 
     .empty-mark {
       flex: 0 0 auto;
-      color: var(--lime-green);
+      color: var(--electric-blue-deep);
       font-family: var(--mono);
       font-size: 24px;
     }
@@ -214,7 +217,10 @@ title: Eroah | Writeups de ciberseguridad
     .writeup-list {
       margin: 0;
       padding: 0;
-      border-top: 1px solid var(--line);
+      overflow: hidden;
+      border: 1px solid rgba(32, 36, 42, 0.14);
+      background: var(--cream);
+      color: var(--charcoal);
       list-style: none;
     }
 
@@ -224,11 +230,11 @@ title: Eroah | Writeups de ciberseguridad
       align-items: center;
       gap: 20px;
       padding: 23px 4px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(32, 36, 42, 0.14);
       text-decoration: none;
     }
 
-    .writeup-item:hover .writeup-title { color: var(--lime-green); }
+    .writeup-item:hover .writeup-title { color: var(--electric-blue-deep); }
 
     .writeup-detail {
       display: grid;
@@ -236,7 +242,7 @@ title: Eroah | Writeups de ciberseguridad
     }
 
     .writeup-category {
-      color: var(--lime-green);
+      color: var(--electric-blue-deep);
       font-family: var(--mono);
       font-size: 11px;
       text-transform: uppercase;
@@ -249,13 +255,13 @@ title: Eroah | Writeups de ciberseguridad
     }
 
     .writeup-description {
-      color: var(--muted);
+      color: var(--ink-muted);
       font-size: 14px;
       line-height: 1.55;
     }
 
     .writeup-arrow {
-      color: var(--lime-green);
+      color: var(--electric-blue-deep);
       font-family: var(--mono);
       font-size: 18px;
     }
@@ -269,16 +275,17 @@ title: Eroah | Writeups de ciberseguridad
     .about-copy {
       max-width: 540px;
       margin: 0;
-      color: #c6c8c0;
+      color: var(--cream-muted);
       font-size: 18px;
       line-height: 1.75;
     }
 
     .about-aside {
       align-self: end;
-      padding-left: 20px;
-      border-left: 2px solid var(--lime-green);
-      color: var(--muted);
+      border-left: 2px solid var(--electric-blue);
+      padding: 20px;
+      background: var(--cream);
+      color: var(--charcoal);
       font-family: var(--mono);
       font-size: 12px;
       line-height: 1.8;
@@ -293,9 +300,9 @@ title: Eroah | Writeups de ciberseguridad
       border-top: 1px solid var(--line);
     }
 
-    .footer-note { color: var(--muted); }
-    footer a { color: var(--pure-white); text-decoration: none; }
-    footer a:hover { color: var(--lime-green); }
+    .footer-note { color: var(--cream-muted); }
+    footer a { color: var(--cream); text-decoration: none; }
+    footer a:hover { color: var(--electric-blue); }
 
     @keyframes arrive {
       from { opacity: 0; transform: translateY(12px); }
@@ -340,9 +347,9 @@ title: Eroah | Writeups de ciberseguridad
 </head>
 <body>
   <header class="shell topbar">
-    <a class="wordmark" href="#inicio" aria-label="Eroah, inicio">
+    <a class="wordmark" href="#inicio" aria-label="Jose Rodas, inicio">
       <span class="wordmark-mark" aria-hidden="true"></span>
-      <span>EROAH</span>
+      <span>JOSE RODAS</span>
     </a>
     <nav class="nav-links" aria-label="Navegación principal">
       <a href="#writeups">Writeups</a>
@@ -355,7 +362,7 @@ title: Eroah | Writeups de ciberseguridad
     <section class="shell hero" id="inicio" aria-labelledby="hero-title">
       <div>
         <p class="eyebrow">Cuaderno de seguridad · {{ site.time | date: "%Y" }}</p>
-        <h1 id="hero-title">Eroah<span style="color: var(--lime-green)">.</span></h1>
+        <h1 id="hero-title">Jose Rodas<span class="hero-title-dot">.</span></h1>
         <p class="hero-copy">Writeups, notas técnicas y aprendizajes sobre ciberseguridad. Documentar el proceso también es parte del trabajo.</p>
         <div class="hero-actions">
           <a class="primary-link" href="#writeups">Explorar writeups <span aria-hidden="true">↘</span></a>
@@ -370,7 +377,7 @@ title: Eroah | Writeups de ciberseguridad
         </div>
         <div class="terminal-body">
           <span class="terminal-line"><span class="terminal-prompt">&gt;</span> whoami</span>
-          <span class="terminal-line terminal-value">Eroah</span>
+          <span class="terminal-line terminal-value">Jose Rodas</span>
           <br>
           <span class="terminal-line"><span class="terminal-prompt">&gt;</span> cat enfoque</span>
           <span class="terminal-line terminal-value">seguridad · investigación · aprendizaje</span>
@@ -416,14 +423,14 @@ title: Eroah | Writeups de ciberseguridad
         <h2 id="about-title">Sobre mí</h2>
       </div>
       <div class="about-grid">
-        <p class="about-copy">Soy Eroah. Este sitio reúne mis writeups de ciberseguridad, apuntes técnicos y cosas que voy aprendiendo. Me interesa entender cómo funcionan los sistemas y compartir el proceso con claridad, siempre desde entornos autorizados.</p>
+        <p class="about-copy">Soy Jose Rodas. Comparto writeups y aprendizajes de ciberseguridad, con foco en documentar cada análisis de forma clara y responsable.</p>
         <p class="about-aside">Un registro en progreso.<br>Hallazgos, contexto y notas<br>para volver a ellos después.</p>
       </div>
     </section>
   </main>
 
   <footer class="shell">
-    <span class="footer-note">© {{ site.time | date: "%Y" }} Eroah · Hecho para documentar</span>
+    <span class="footer-note">© {{ site.time | date: "%Y" }} Jose Rodas · Eroah</span>
     <a class="footer-note" href="https://github.com/Er0ah" target="_blank" rel="noreferrer">GitHub ↗</a>
   </footer>
 </body>
