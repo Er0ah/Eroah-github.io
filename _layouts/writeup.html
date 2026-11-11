@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10120e">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <style>
+    .shell {
+      width: min(820px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .mono {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .mono:hover { color: var(--lime-green); }
+
+    main { padding-block: 64px 100px; }
+
+    .back {
+      color: var(--lime-green);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .category {
+      margin: 40px 0 14px;
+      color: var(--lime-green);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 8vw, 68px);
+      font-weight: 600;
+      line-height: 1.02;
+      overflow-wrap: anywhere;
+    }
+
+    .description {
+      max-width: 650px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    article {
+      margin-top: 52px;
+      padding-top: 36px;
+      border-top: 1px solid var(--line);
+      font-size: 17px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    article h2,
+    article h3,
+    article h4 {
+      margin: 1.8em 0 0.6em;
+      line-height: 1.2;
+    }
+
+    article h2 { font-size: 32px; }
+    article h3 { font-size: 24px; }
+
+    article p,
+    article ul,
+    article ol { color: #d3d5ce; }
+
+    article a {
+      color: var(--lime-green);
+      text-underline-offset: 4px;
+    }
+
+    article blockquote {
+      margin-inline: 0;
+      padding: 2px 0 2px 20px;
+      border-left: 2px solid var(--lime-green);
+      color: var(--muted);
+    }
+
+    article code {
+      padding: 2px 5px;
+      background: #20231c;
+      color: var(--lime-green);
+      font-family: var(--mono);
+      font-size: 0.84em;
+    }
+
+    article pre {
+      overflow-x: auto;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: #171a14;
+    }
+
+    article pre code {
+      padding: 0;
+      background: none;
+      color: var(--pure-white);
+    }
+
+    article img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    article table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+    }
+
+    article th,
+    article td {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+    }
+
+    article th { color: var(--lime-green); }
+    footer { padding-block: 22px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 600px) {
+      .shell { width: calc(100% - 28px); }
+      main { padding-block: 48px 72px; }
+      article { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="wordmark" href="{{ '/' | relative_url }}"><span class="wordmark-mark" aria-hidden="true"></span>EROAH</a>
+    <a class="mono" href="{{ '/' | relative_url }}#writeups">← Todos los writeups</a>
+  </header>
+  <main class="shell">
+    <a class="back" href="{{ '/' | relative_url }}#writeups">← Volver al archivo</a>
+    <p class="category">{{ page.category | default: "Writeup" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="description">{{ page.description }}</p>{% endif %}
+    <article>{{ content }}</article>
+  </main>
+  <footer class="shell mono">© {{ site.time | date: "%Y" }} Eroah</footer>
+</body>
+</html>

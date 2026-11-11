@@ -1,0 +1,58 @@
+:root {
+  color-scheme: dark;
+  --midnight-black: #10120e;
+  --pure-white: #f3f4ed;
+  --lime-green: #c4f34a;
+  --muted: #9da196;
+  --line: #34372f;
+  --mono: "DM Mono", "Courier New", monospace;
+  --sans: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--midnight-black);
+  color: var(--pure-white);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+a:focus-visible {
+  outline: 2px solid var(--lime-green);
+  outline-offset: 5px;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.topbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--pure-white);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.wordmark-mark {
+  width: 10px;
+  height: 10px;
+  background: var(--lime-green);
+}

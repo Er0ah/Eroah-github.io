@@ -1,0 +1,16 @@
+title: Eroah | Writeups de ciberseguridad
+url: https://er0ah.github.io
+baseurl: /Eroah-github.io
+markdown: kramdown
+
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: writeup
